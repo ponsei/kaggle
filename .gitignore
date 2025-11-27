@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.Python
+
+# Environments
+.venv/
+.env
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Kaggle data
+input/
+data/
+
+# VSCode / IDE
+.vscode/
+.DS_Store

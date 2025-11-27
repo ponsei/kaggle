@@ -52,3 +52,4 @@
    4. ロジスティック回帰→ランダムフォレストでベースライン
    5. 精度確認→`test.csv` 推論→`submission.csv` 生成
 # titanic_kaggle
+# titanic_kaggle

@@ -1,0 +1,20 @@
+{
+  "competition": "playground-series-s5e12",
+  "task": "binary_classification",
+  "metric": "log_loss",
+  "data": {
+    "train": "data/input/train.csv",
+    "test": "data/input/test.csv"
+  },
+  "model": {
+    "name": "lightgbm",
+    "params": {}
+  },
+  "features": {
+    "dir": "features"
+  },
+  "output": {
+    "dir": "data/output",
+    "submission": "submissions/submission.csv"
+  }
+}

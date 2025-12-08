@@ -1,0 +1,20 @@
+{
+  "competition": "titanic",
+  "task": "binary_classification",
+  "metric": "accuracy",
+  "data": {
+    "train": "data/input/train.csv",
+    "test": "data/input/test.csv"
+  },
+  "model": {
+    "name": "random_forest",
+    "params": {}
+  },
+  "features": {
+    "dir": "features"
+  },
+  "output": {
+    "dir": "data/output",
+    "submission": "submissions/submission.csv"
+  }
+}

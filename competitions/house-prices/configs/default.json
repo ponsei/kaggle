@@ -1,0 +1,20 @@
+{
+  "competition": "house-prices-advanced-regression-techniques",
+  "task": "regression",
+  "metric": "rmse",
+  "data": {
+    "train": "data/input/train.csv",
+    "test": "data/input/test.csv"
+  },
+  "model": {
+    "name": "lightgbm",
+    "params": {}
+  },
+  "features": {
+    "dir": "features"
+  },
+  "output": {
+    "dir": "data/output",
+    "submission": "submissions/submission.csv"
+  }
+}

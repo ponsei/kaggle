@@ -6,17 +6,23 @@
 
 ```
 Kaggle/
-├── notebooks/          # Jupyter Notebook（EDA、特徴量作成、モデリング）
-├── input/              # コンペデータ（各コンペごとにディレクトリ分け）
+├── competitions/      # 各コンペティションごとのディレクトリ
 │   ├── titanic/
-│   ├── bnp-paribas-cardif-claims-management/
-│   ├── house-prices-advanced-regression-techniques/
-│   └── atmacup08-dataset/
-├── submissions/        # 提出ファイル（CSV、HTMLレポートなど）
-├── archives/          # ダウンロードしたzipファイルのアーカイブ
+│   │   ├── configs/           # 設定ファイル（default.json）
+│   │   ├── data/
+│   │   │   ├── input/         # オリジナルの生データ
+│   │   │   └── output/        # 処理されたデータや予測結果
+│   │   ├── features/          # 特徴量エンジニアリング関連ファイル
+│   │   ├── logs/              # 実行ログやモデルの学習ログ
+│   │   ├── notebooks/         # Jupyter Notebook（EDA、特徴量作成、モデリング）
+│   │   └── submissions/       # 提出ファイル（CSV）
+│   ├── bnp-paribas/
+│   ├── house-prices/
+│   ├── atmacup8/
+│   └── playground-series-s5e12/
 ├── docs/              # ドキュメント（このREADME、Docker手順、Tipsなど）
 ├── src/               # 再利用可能なPythonスクリプトや補助関数
-└── data/              # 前処理済みデータや中間生成物
+└── Pandas_100_knocks/ # Pandas学習用ノートブック
 ```
 
 ## 🎯 取り組んでいるコンペティション
@@ -49,6 +55,11 @@ Kaggle/
 - **詳細**: [docs/competitions/atmacup8.md](docs/competitions/atmacup8.md)
 - **ノートブック**: `atmaCup#8.ipynb`
 
+### 5. **Playground Series S5E12 - Diabetes Prediction Challenge** (分類)
+- **タスク**: 二値分類（糖尿病診断予測）
+- **評価指標**: Log Loss（対数損失）
+- **ノートブック**: `Playground Series S5E12.ipynb`
+
 ## 📚 ドキュメント
 
 - **[Docker環境のセットアップ](docs/docker.md)** - Jupyter Notebookの起動手順
@@ -66,8 +77,8 @@ Kaggle/
 2. **データを取得**
    ```bash
    # Kaggle APIを使用
-   kaggle competitions download -c titanic -p input/titanic
-   cd input/titanic && unzip titanic.zip && rm titanic.zip
+   kaggle competitions download -c titanic -p competitions/titanic/data/input
+   cd competitions/titanic/data/input && unzip titanic.zip && rm titanic.zip
    ```
 
 3. **Notebookを起動**

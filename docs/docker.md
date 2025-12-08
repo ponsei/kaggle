@@ -191,6 +191,32 @@ pip install -U "jupyter-server<2.0.0"
 docker pull gcr.io/kaggle-images/python
 ```
 
+### Optunaのインストール
+
+Kaggle公式イメージにはOptunaが含まれていない場合があります。コンテナ内でインストールしてください：
+
+```bash
+# コンテナ内で実行
+pip install optuna
+```
+
+または、コンテナ起動時にインストール：
+
+```bash
+docker run -it --rm \
+  -p 8888:8888 \
+  -v /Users/orimotoseiya/Desktop/Kaggle:/workspace \
+  -v ~/.kaggle:/root/.kaggle \
+  gcr.io/kaggle-images/python \
+  bash -c "pip install optuna && bash"
+```
+
+**Optunaの確認方法**:
+```bash
+# コンテナ内で実行
+python -c "import optuna; print(optuna.__version__)"
+```
+
 ---
 
 **関連ドキュメント**: [README.md](../README.md) | [Notebookの説明](notebooks.md)
